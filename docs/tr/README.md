@@ -102,7 +102,7 @@ conda install -c conda-forge 'ffmpeg<7'
 
 [ffmpeg.exe](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/ffmpeg.exe) ve [ffprobe.exe](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/ffprobe.exe) dosyalarını indirin ve GPT-SoVITS kök dizinine yerleştirin.
 
-##### Mac Kullanıcıları
+##### MacOS Kullanıcıları
 ```bash
 brew install ffmpeg
 ```
@@ -241,6 +241,7 @@ python ./tools/asr/fasterwhisper_asr.py -i <girdi> -o <çıktı> -l <dil>
 - [gradio](https://github.com/gradio-app/gradio)
 - [faster-whisper](https://github.com/SYSTRAN/faster-whisper)
 - [FunASR](https://github.com/alibaba-damo-academy/FunASR)
+- [SenseVoice](https://github.com/FunAudioLLM/SenseVoice)
   
 ## Tüm katkıda bulunanlara çabaları için teşekkürler
 

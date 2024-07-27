@@ -106,7 +106,7 @@ conda install -c conda-forge 'ffmpeg<7'
 
 Download and place [ffmpeg.exe](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/ffmpeg.exe) and [ffprobe.exe](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/ffprobe.exe) in the GPT-SoVITS root.
 
-##### Mac Users
+##### MacOS Users
 ```bash
 brew install ffmpeg
 ```
@@ -159,6 +159,8 @@ Users in the China region can download this model by entering the links below
 - [Faster Whisper Large V3](https://www.icloud.com/iclouddrive/0c4pQxFs7oWyVU1iMTq2DbmLA#faster-whisper-large-v3) (Click "Download a copy", log out if you encounter errors while downloading.)
 
 - [Faster Whisper Large V3](https://hf-mirror.com/Systran/faster-whisper-large-v3) (HuggingFace mirror site)
+
+For SenseVoice Multilingual ASR, download models from [FunAudioLLM/SenseVoiceSmall](https://huggingface.co/FunAudioLLM/SenseVoiceSmall/tree/main) or [iic/SenseVoiceSmall](https://modelscope.cn/models/iic/SenseVoiceSmall/files) and place them in `tools/asr/models`.
 
 ## Dataset Format
 
@@ -227,9 +229,14 @@ ASR processing is performed through Faster_Whisper(ASR marking except Chinese)
 
 (No progress bars, GPU performance may cause time delays)
 ```
-python ./tools/asr/fasterwhisper_asr.py -i <input> -o <output> -l <language>
+python ./tools/asr/fasterwhisper_asr.py -i <input> -o <output> -l <language> -p <precision>
+```
+SenseVoice Multilingual ASR
+```
+python tools/asr/sensevoice.py -i <input> -o <output> -l <language> -d <device>
 ```
 A custom list save path is enabled
+
 
 ## Credits
 
@@ -257,6 +264,7 @@ Special thanks to the following projects and contributors:
 - [gradio](https://github.com/gradio-app/gradio)
 - [faster-whisper](https://github.com/SYSTRAN/faster-whisper)
 - [FunASR](https://github.com/alibaba-damo-academy/FunASR)
+- [SenseVoice](https://github.com/FunAudioLLM/SenseVoice)
   
 ## Thanks to all contributors for their efforts
 
